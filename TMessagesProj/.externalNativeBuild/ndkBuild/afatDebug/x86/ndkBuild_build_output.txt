@@ -1,0 +1,18 @@
+Android NDK: WARNING:/home/bogdan/TelegramAndroid/Telegram/TMessagesProj/jni/Android.mk:flac: LOCAL_LDLIBS is always ignored for static libraries    
+Android NDK: WARNING: Unsupported source file extensions in /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/jni/Android.mk for module flac    
+Android NDK:   ./exoplayer/libFLAC/windows_unicode_filenames    
+rm -f /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/build/intermediates/ndkBuild/afat/debug/lib/x86/*
+rm -f /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/build/intermediates/ndkBuild/afat/debug/lib/x86/gdbserver
+rm -f /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/build/intermediates/ndkBuild/afat/debug/lib/x86/gdb.setup
+mkdir -p /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/build/intermediates/ndkBuild/afat/debug/lib/x86
+echo [x86] "Gdbserver      ": "[i686-linux-android] /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/build/intermediates/ndkBuild/afat/debug/lib/x86/gdbserver"
+install -p /home/bogdan/Android/Sdk/ndk-bundle/prebuilt/android-x86/gdbserver/gdbserver /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/build/intermediates/ndkBuild/afat/debug/lib/x86/gdbserver
+echo [x86] "Gdbsetup       ": "/home/bogdan/TelegramAndroid/Telegram/TMessagesProj/build/intermediates/ndkBuild/afat/debug/lib/x86/gdb.setup"
+echo "set solib-search-path /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/build/intermediates/ndkBuild/afat/debug/obj/local/x86" > /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/build/intermediates/ndkBuild/afat/debug/lib/x86/gdb.setup
+echo "directory /home/bogdan/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot /home/bogdan/Android/Sdk/ndk-bundle/sources/android/support /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/jni /home/bogdan/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++ /home/bogdan/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include /home/bogdan/Android/Sdk/ndk-bundle/sources/android/cpufeatures ./jni/exoplayer/libFLAC/include ./jni/boringssl/include/ /home/bogdan/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include /home/bogdan/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/../llvm-libc++abi/include ./jni/libwebp/src" >> /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/build/intermediates/ndkBuild/afat/debug/lib/x86/gdb.setup
+mkdir -p /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/build/intermediates/ndkBuild/afat/debug/obj/local/x86
+echo [x86] "Prebuilt       ": "libc++_shared.so <= <NDK>/sources/cxx-stl/llvm-libc++/libs/x86/"
+cp -f /home/bogdan/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/libs/x86/libc++_shared.so /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/build/intermediates/ndkBuild/afat/debug/obj/local/x86/libc++_shared.so
+echo [x86] "Install        ": "libc++_shared.so => /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/build/intermediates/ndkBuild/afat/debug/lib/x86/libc++_shared.so"
+install -p /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/build/intermediates/ndkBuild/afat/debug/obj/local/x86/libc++_shared.so /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/build/intermediates/ndkBuild/afat/debug/lib/x86/libc++_shared.so
+/home/bogdan/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/i686-linux-android-strip --strip-unneeded  /home/bogdan/TelegramAndroid/Telegram/TMessagesProj/build/intermediates/ndkBuild/afat/debug/lib/x86/libc++_shared.so

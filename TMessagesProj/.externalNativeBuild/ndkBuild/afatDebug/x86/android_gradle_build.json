@@ -1,0 +1,11 @@
+{
+  "buildFiles": [
+    "/home/bogdan/TelegramAndroid/Telegram/TMessagesProj/jni/Android.mk",
+    "/home/bogdan/TelegramAndroid/Telegram/TMessagesProj/jni/Application.mk"
+  ],
+  "cleanCommands": [],
+  "libraries": {},
+  "toolchains": {},
+  "cFileExtensions": [],
+  "cppFileExtensions": []
+}
